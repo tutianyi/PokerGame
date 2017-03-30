@@ -1,6 +1,7 @@
 ﻿using System;
+using PokerGame;
 
-namespace PokerGame
+namespace PokerGameUI
 {
     class Program
     {

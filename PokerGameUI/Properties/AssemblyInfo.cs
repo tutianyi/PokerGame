@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("PokerGame")]
+[assembly: AssemblyTitle("ConsoleApplication1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PokerGame")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("Sky123.Org")]
+[assembly: AssemblyProduct("ConsoleApplication1")]
+[assembly: AssemblyCopyright("Copyright © Sky123.Org 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("5ae94280-ee42-47c3-8fa4-1a4a037e90ae")]
+[assembly: Guid("6aef82ce-47e8-41ad-aaad-7d78148955d5")]
 
 // 程序集的版本信息由下面四个值组成:
 //
