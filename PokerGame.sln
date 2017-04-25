@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerGameUI", "PokerGameUI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerGame", "PokerGame\PokerGame.csproj", "{352B3683-F546-4370-9EF4-1A689281A512}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerGame.Test", "PokerGame.Test\PokerGame.Test.csproj", "{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{352B3683-F546-4370-9EF4-1A689281A512}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{352B3683-F546-4370-9EF4-1A689281A512}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{352B3683-F546-4370-9EF4-1A689281A512}.Release|x86.ActiveCfg = Release|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EEF89463-C3C0-4F58-A95E-D08775EC1AC1}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
