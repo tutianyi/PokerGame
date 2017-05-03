@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PokerGame
 {
@@ -14,24 +15,21 @@ namespace PokerGame
                                        "5","6","7","8",
                                        "9","10","J","Q","K"
                                    };
-            cards = new Card[Count];
+            cards = new List<Card>();
             
-            cards[0] = new Card("王", "大");
-            cards[1] = new Card("王", "小");
-            for(int i=0;i<numbers.Length;i++)
-            {
-                cards[numbers.Length * 0 + i + 2] = new Card("黑桃", numbers[i]);
-                cards[numbers.Length * 1 + i + 2] = new Card("红桃", numbers[i]);
-                cards[numbers.Length * 2 + i + 2] = new Card("梅花", numbers[i]);
-                cards[numbers.Length * 3 + i + 2] = new Card("方块", numbers[i]);
-            }
-
-            index = 0;
+            cards.Add(new Card("王", "大"));
+            cards.Add(new Card("王", "小"));
+            foreach (var number in numbers)
+                cards.Add(new Card("黑桃", number));
+            foreach (var number in numbers)
+                cards.Add(new Card("红桃", number));
+            foreach (var number in numbers)
+                cards.Add(new Card("梅花", number));
+            foreach (var number in numbers)
+                cards.Add(new Card("方块", number));
         }
 
-        private Card[] cards;
-
-        private int index;
+        private IList<Card> cards;
 
         public void Shuffle()
         {
@@ -51,7 +49,9 @@ namespace PokerGame
 
         public Card Deal()
         {
-            return cards[index++];
+            var card = cards[0];
+            cards.Remove(card);
+            return card;
         }
     }
 }

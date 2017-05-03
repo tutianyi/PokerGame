@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="Dealer.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
