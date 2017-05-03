@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PokerGame
 {
@@ -29,12 +30,51 @@ namespace PokerGame
 
         public static bool operator ==(Card card1, Card card2)
         {
-            return card1.Equals(card2);
+            return Dics[card1.Point] == Dics[card2.Point];
         }
 
         public static bool operator !=(Card card1, Card card2)
         {
             return !(card1 == card2);
         }
+
+        public static bool operator >=(Card card1, Card card2)
+        {
+            return Dics[card1.Point] >= Dics[card2.Point];
+        }
+
+        public static bool operator <=(Card card1, Card card2)
+        {
+            return Dics[card1.Point] <= Dics[card2.Point];
+        }
+
+        public static bool operator <(Card card1, Card card2)
+        {
+            return Dics[card1.Point] < Dics[card2.Point];
+        }
+
+        public static bool operator >(Card card1, Card card2)
+        {
+            return Dics[card1.Point] > Dics[card2.Point];
+        }
+
+        public static IDictionary<string, int> Dics =
+            new Dictionary<string, int>()
+                {
+                    {"7", 77},
+                    {"鬼", 60},
+                    {"5", 55},
+                    {"2", 42},
+                    {"3", 33},
+                    {"A", 21},
+                    {"K", 13},
+                    {"Q", 12},
+                    {"J", 11},
+                    {"10", 10},
+                    {"9", 9},
+                    {"8", 8},
+                    {"6", 6},
+                    {"4", 4},
+                };
     }
 }
