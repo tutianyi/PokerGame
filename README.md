@@ -87,7 +87,8 @@
 - 玩家摸牌（TouchCards(Dealer)）；
 - 实现手牌的自动排序；
 - 根据一张牌，计算玩家可出的所有牌（ CandidateShowCards(Card)）；
-- 玩家出牌（ShowCard(Card)），将指定的牌打出。
+- 玩家出牌（ShowCard(Card)），将指定的牌打出；
+- 每个玩家拥有自己的牌堆（CardHeap），用于记录自己出过的牌。
 
 ## Step 7: 让游戏运行起来
 
