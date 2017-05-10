@@ -17,8 +17,8 @@ namespace PokerGame
                                    };
             cards = new List<Card>();
             
-            cards.Add(new Card("王", "大"));
-            cards.Add(new Card("王", "小"));
+            cards.Add(new Card("大", "鬼"));
+            cards.Add(new Card("小", "鬼"));
             foreach (var number in numbers)
                 cards.Add(new Card("黑桃", number));
             foreach (var number in numbers)
@@ -52,6 +52,11 @@ namespace PokerGame
             var card = cards[0];
             cards.Remove(card);
             return card;
+        }
+
+        public int SurplusCount()
+        {
+            return cards.Count;
         }
     }
 }

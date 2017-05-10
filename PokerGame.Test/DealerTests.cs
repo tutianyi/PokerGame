@@ -9,8 +9,8 @@ namespace PokerGame.Test
         public void deal_cards_when_not_shuffle()
         {
             var dealer = new Dealer();
-            Assert.AreEqual(new Card("王", "大"), dealer.Deal());
-            Assert.AreEqual(new Card("王", "小"), dealer.Deal());
+            Assert.AreEqual(new Card("大", "鬼"), dealer.Deal());
+            Assert.AreEqual(new Card("小", "鬼"), dealer.Deal());
             Assert.AreEqual(new Card("黑桃", "A"), dealer.Deal());
             for (int i = 0; i < 12; i++)
                 dealer.Deal();

@@ -99,5 +99,13 @@ namespace PokerGame.Test
             Assert.True(new Card("黑桃", "7") <= new Card("红桃", "7"));
             Assert.True(new Card("黑桃", "4") <= new Card("黑桃", "7"));
         }
+
+        [Test]
+        public void compare_to()
+        {
+            Assert.AreEqual(1, new Card("黑桃", "7").CompareTo(new Card("黑桃", "4")));
+            Assert.AreEqual(-1, new Card("黑桃", "4").CompareTo(new Card("黑桃", "7")));
+            Assert.AreEqual(0, new Card("黑桃", "7").CompareTo(new Card("红桃", "7")));
+        }
     }
 }

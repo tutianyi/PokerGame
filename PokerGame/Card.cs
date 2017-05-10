@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PokerGame
 {
-    public class Card
+    public class Card : IComparable<Card>
     {
         public Card(string color, string point)
         {
@@ -14,11 +14,20 @@ namespace PokerGame
         public string Color { get; private set; }
         public string Point { get; private set; }
 
+        public int CompareTo(Card other)
+        {
+            if (Dics[this.Point] > Dics[other.Point])
+                return 1;
+            if (Dics[this.Point] < Dics[other.Point])
+                return -1;
+            return 0;
+        }
+
         public override string ToString()
         {
             return Color + Point;
         }
-        
+
         public override bool Equals(object obj)
         {
             if (!(obj is Card))
