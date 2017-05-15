@@ -41,5 +41,17 @@ namespace PokerGame.Test
                 Assert.GreaterOrEqual(countNotSame, 36);
             }
         }
+
+        [Test]
+        public void when_deal_is_empty()
+        {
+            var dealer = new Dealer();
+            Assert.False(dealer.Empty());
+            for (int i = 0; i < 54; i++)
+            {
+                dealer.Deal();
+            }
+            Assert.True(dealer.Empty());
+        }
     }
 }

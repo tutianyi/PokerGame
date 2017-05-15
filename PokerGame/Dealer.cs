@@ -58,5 +58,10 @@ namespace PokerGame
         {
             return cards.Count;
         }
+
+        public bool Empty()
+        {
+            return cards.Count == 0;
+        }
     }
 }

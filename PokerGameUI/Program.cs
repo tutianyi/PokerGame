@@ -9,14 +9,13 @@ namespace PokerGameUI
         {
             Dealer dealer = new Dealer();
             dealer.Shuffle();
+            Player playerA = new Player("A");
+            Player playerB = new Player("B");
 
-            for(int i=0;i<Dealer.Count;i++)
-            {
-                Console.Write(dealer.Deal());
-                Console.Write('\t');
-            }
+            Game game = new Game(dealer, playerA, playerB);
+            game.Run();
             
-            Console.Read();
+            Console.ReadLine();
         }
     }
 }

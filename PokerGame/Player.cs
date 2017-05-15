@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace PokerGame
 {
@@ -18,7 +19,8 @@ namespace PokerGame
 
         public void TouchCards(Dealer dealer)
         {
-            Hands.Add(dealer.Deal());
+            while(!dealer.Empty() && Hands.Count < 5)
+                Hands.Add(dealer.Deal());
             Hands = Hands.OrderBy(x => x).ToList();
         }
 
@@ -37,6 +39,15 @@ namespace PokerGame
         {
             Hands.Remove(card);
             CardHeap.Add(card);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("{0}: ({1})\t", this.Name, this.CardHeap.Count);
+            foreach (var card in Hands)
+                sb.AppendFormat("{0} ", card.ToString());
+            return sb.ToString();
         }
     }
 }

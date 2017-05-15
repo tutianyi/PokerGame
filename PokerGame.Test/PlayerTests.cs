@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace PokerGame.Test
 {
@@ -11,11 +12,7 @@ namespace PokerGame.Test
         public void SetUp()
         {
             dealer = new Dealer();
-            player = new Player("");
-            player.TouchCards(dealer);
-            player.TouchCards(dealer);
-            player.TouchCards(dealer);
-            player.TouchCards(dealer);
+            player = new Player("A");
             player.TouchCards(dealer);
         }
 
@@ -47,6 +44,19 @@ namespace PokerGame.Test
             player.ShowCard(player.Hands[0]);
             Assert.AreEqual(5 - 1, player.Hands.Count);
             Assert.AreEqual(1, player.CardHeap.Count);
+        }
+
+        [Test]
+        public void to_string()
+        {
+            player.CardHeap.Add(Card.Null());
+            player.CardHeap.Add(Card.Null());
+            player.CardHeap.Add(Card.Null());
+            player.CardHeap.Add(Card.Null());
+            player.CardHeap.Add(Card.Null());
+
+            string expected = "A: (5)\t黑桃A 黑桃3 黑桃2 大鬼 小鬼 ";
+            Assert.AreEqual(expected, player.ToString());
         }
     }
 }

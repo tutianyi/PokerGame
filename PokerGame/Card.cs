@@ -84,6 +84,12 @@ namespace PokerGame
                     {"8", 8},
                     {"6", 6},
                     {"4", 4},
+                    {"", 0}
                 };
+
+        public static Card Null()
+        {
+            return new Card("","");
+        }
     }
 }
