@@ -32,16 +32,15 @@ namespace PokerGame.Test
         [Test]
         public void candidate_show_cards()
         {
-            var result = player.CandidateShowCards(new Card("红桃", "2"));
-            Assert.AreEqual("2", result[1].Point);
-            Assert.AreEqual("鬼", result[2].Point);
-            Assert.AreEqual("鬼", result[3].Point);
+            var result = player.CandidateShowCards(new Single(new Card("红桃", "2")));
+            Assert.AreEqual("2", result[1].Cards[0].Point);
+            Assert.AreEqual("鬼", result[2].Cards[0].Point);
         }
 
         [Test]
         public void show_card()
         {
-            player.ShowCard(player.Hands[0]);
+            player.ShowCard(new Single(player.Hands[0]));
             Assert.AreEqual(5 - 1, player.Hands.Count);
             Assert.AreEqual(1, player.CardHeap.Count);
         }

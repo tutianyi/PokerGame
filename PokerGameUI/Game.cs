@@ -32,7 +32,7 @@ namespace PokerGameUI
                 //出牌阶段
                 Console.WriteLine("============================================");
                 Console.WriteLine("                  出牌阶段                  ");
-                Card againstCard = Card.Null();
+                CardGroup againstCard = CardGroup.Null();
                 int passedCount = 0;
                 do
                 {

@@ -24,21 +24,37 @@ namespace PokerGame
             Hands = Hands.OrderBy(x => x).ToList();
         }
 
-        public IDictionary<int, Card> CandidateShowCards(Card needGreateAndEqualThanCard)
+        private IList<CardGroup> AllCardGroup()
         {
-            var dictionary = new Dictionary<int, Card>();
+            IList<CardGroup> groups = new List<CardGroup>();
             foreach (var card in Hands)
             {
-                if(card >= needGreateAndEqualThanCard)
-                    dictionary.Add(dictionary.Count+1, card);
+                if(groups.Count==0 || groups.Last().Cards[0]!=card)
+                    groups.Add(new Single(card));
+                else
+                    groups.Add(groups.Last().UpRank(card));
+            }
+            return groups;
+        }
+
+        public IDictionary<int, CardGroup> CandidateShowCards(CardGroup againstCardGroup)
+        {
+            var dictionary = new Dictionary<int, CardGroup>();
+            foreach (var group in AllCardGroup())
+            {
+                if(group >= againstCardGroup)
+                    dictionary.Add(dictionary.Count+1, @group);
             }
             return dictionary;
         }
 
-        public void ShowCard(Card card)
+        public void ShowCard(CardGroup group)
         {
-            Hands.Remove(card);
-            CardHeap.Add(card);
+            foreach (var card in group.Cards)
+            {
+                Hands.Remove(card);
+                CardHeap.Add(card);
+            }
         }
 
         public override string ToString()
