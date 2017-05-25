@@ -38,16 +38,15 @@ namespace PokerGameUI
                 {
                     foreach(var player in Players)
                     {
-                        var candidates = player.CandidateShowCards(againstCard);
-                        if (candidates.Count > 0)
+                        if(player.CanFollow(againstCard))
                         {
-                            player.ShowCard(candidates[1]);
-                            againstCard = candidates[1];
-                            Console.WriteLine("{0}: {1}", player.Name, candidates[1]);
+                            againstCard = player.Follow(againstCard);
+                            Console.WriteLine("{0}: {1}", player.Name, againstCard);
                             passedCount = 0;
                         }
                         else
                         {
+                            Console.WriteLine("{0}: Pass", player.Name);
                             passedCount++;
                         }
                         if (passedCount >= Players.Count() - 1)

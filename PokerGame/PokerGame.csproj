@@ -43,10 +43,12 @@
     <Compile Include="BigBomb.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardGroup.cs" />
+    <Compile Include="Computer.cs" />
     <Compile Include="Dealer.cs" />
     <Compile Include="Double.cs" />
     <Compile Include="LittleBomb.cs" />
     <Compile Include="Null.cs" />
+    <Compile Include="People.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

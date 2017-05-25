@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PokerGame
 {
-    public class Player
+    public abstract class Player
     {
         public Player(string name)
         {
@@ -65,5 +65,12 @@ namespace PokerGame
                 sb.AppendFormat("{0} ", card.ToString());
             return sb.ToString();
         }
+
+        public bool CanFollow(CardGroup againstCard)
+        {
+            return CandidateShowCards(againstCard).Count > 0;
+        }
+
+        public abstract CardGroup Follow(CardGroup againstCard);
     }
 }

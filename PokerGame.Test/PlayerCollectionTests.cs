@@ -13,9 +13,9 @@ namespace PokerGame.Test
         [SetUp]
         public void SetUp()
         {
-            playerA = new Player("A");
-            playerB = new Player("B");
-            playerC = new Player("C");
+            playerA = new Computer("A");
+            playerB = new Computer("B");
+            playerC = new Computer("C");
             players = new PlayerCollection(playerA, playerB, playerC);
         }
 

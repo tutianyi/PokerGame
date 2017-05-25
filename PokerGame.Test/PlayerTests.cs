@@ -12,7 +12,7 @@ namespace PokerGame.Test
         public void SetUp()
         {
             dealer = new Dealer();
-            player = new Player("A");
+            player = new Computer("A");
             player.TouchCards(dealer);
         }
 
